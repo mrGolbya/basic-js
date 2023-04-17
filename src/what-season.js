@@ -15,13 +15,13 @@ function getSeason(date) {
   // throw new NotImplementedError('Not implemented');
   const now = date;
   const month = now.getMonth() + 1;
-  const day = now.getDate();
   
-  if (month > 3 && month < 6) {
+  
+  if (month > 2 && month < 6) {
     return 'spring';
   }
 
-  if (month > 6 && month < 9) {
+  if (month > 5 && month < 9) {
     return 'summer';
   }
 
@@ -33,7 +33,7 @@ function getSeason(date) {
     return 'winter';
   }
 
-  
+  const day = now.getDate();
   if (month === 3) {
     return day < 22 ? 'winter' : 'spring';
   }
